@@ -1,19 +1,20 @@
 #container {
-    background-color: rgb(0, 26, 255);
+    background-color:orange;
     text-align: center;
-    color: ivory;
+    color: black;
     box-sizing: content-box;
     width: 900px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 #bodycon {
-    background-color: dodgerblue;
-    color: gainsboro;
+    background-color: orange;
+    color: black;
     width: 900px;
 }
-#header
-#start {
-    
+
+#image {
+    width: 200px;
+    height: 100px;
 }

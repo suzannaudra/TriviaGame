@@ -48,7 +48,7 @@ $('#start').on('click', function () {
 var game = {
     correctAnswer: 0,
     incorrectAnswer: 0,
-    counter: 10,
+    counter: 500,
     countdown: function(){
         game.counter--;
         $('#counter').html(game.counter);
@@ -56,13 +56,13 @@ var game = {
             console.log("Time's up!");
            
             game.result();
-            //  game.done();
+             game.done();
         }
     },
   
 //start timer and reset timer when gameover 
     start: function(){
-        timer = setInterval(game.countdown,1000);
+        timer = setInterval(game.countdown,500);
         console.log (timer);
         $('#bodycon').prepend('<h2>Time Left:<span id="counter">100</span> seconds</h2>');
         $('#start').remove();
