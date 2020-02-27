@@ -48,7 +48,7 @@ $('#start').on('click', function () {
 var game = {
     correctAnswer: 0,
     incorrectAnswer: 0,
-    counter: 500,
+    counter: 30,
     countdown: function(){
         game.counter--;
         $('#counter').html(game.counter);
@@ -57,12 +57,13 @@ var game = {
            
             game.result();
              game.done();
+            
         }
     },
   
 //start timer and reset timer when gameover 
     start: function(){
-        timer = setInterval(game.countdown,500);
+        timer = setInterval(game.countdown,30);
         console.log (timer);
         $('#bodycon').prepend('<h2>Time Left:<span id="counter">100</span> seconds</h2>');
         $('#start').remove();
@@ -77,7 +78,7 @@ var game = {
         $('#bodycon').append('<button id="end">DONE</button>');
 //hide screen and display number of answers correct/incorrect
     },
-    done: function(){
+    done:function(){
         $.each($('input[name=question-0]":checked'),function(){
             if($(this).val()===questions[0].correctAnswer){
                 game.correctAnswer++;
@@ -177,4 +178,3 @@ var game = {
     })
 })
 //add buttom to submit answers at the end 
-console.log ("hello");
